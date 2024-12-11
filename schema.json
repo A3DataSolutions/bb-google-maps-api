@@ -1,0 +1,136 @@
+{
+  "type": "datasource",
+  "metadata": {},
+  "schema": {
+    "docs": "https://docs.budibase.com",
+    "friendlyName": "Google Maps API",
+    "type": "API",
+    "description": "Performs Google Maps API Calls for autocompleter",
+    "datasource": {
+      "url": {
+        "type": "string",
+        "required": true
+      },
+      "api_key": {
+        "type": "password",
+        "required": false,
+        "display": "API Key"
+      }
+    },
+    "query": {
+      "read": {
+        "type": "fields",
+        "fields": {
+          "input": {
+            "display": "Input",
+            "type": "string",
+            "required": true
+          },
+          "components": {
+            "display": "Components",
+            "type": "string",
+            "required": false
+          },
+          "language": {
+            "display": "Language",
+            "type": "string",
+            "required": false
+          },
+          "location": {
+            "display": "Location",
+            "type": "string",
+            "required": false
+          },
+          "locationbias": {
+            "display": "Locationbias",
+            "type": "string",
+            "required": false
+          },
+          "locationrestriction": {
+            "display": "Locationrestriction",
+            "type": "string",
+            "required": false
+          },
+          "offset": {
+            "display": "Offset",
+            "type": "string",
+            "required": false
+          },
+          "origin": {
+            "display": "Origin",
+            "type": "string",
+            "required": false
+          },
+          "radius": {
+            "display": "Radius",
+            "type": "string",
+            "required": false
+          },
+          "region": {
+            "display": "Region",
+            "type": "string",
+            "required": false
+          },
+          "sessiontoken": {
+            "display": "Sessiontoken",
+            "type": "string",
+            "required": false
+          },
+          "strictbounds": {
+            "display": "Strictbounds",
+            "type": "string",
+            "required": false
+          },
+          "types": {
+            "display": "Types",
+            "type": "string",
+            "required": false
+          },
+          "place_id": {
+            "display": "Place ID",
+            "type": "string",
+            "required": true
+          },
+          "fields": {
+            "display": "Fields",
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "details": {
+        "type": "fields",
+        "fields": {
+          "place_id": {
+            "display": "Place ID",
+            "type": "string",
+            "required": true
+          },
+          "sessiontoken": {
+            "display": "Session token",
+            "type": "string",
+            "required": false
+          },
+          "fields": {
+            "display": "Fields",
+            "type": "string",
+            "required": false
+          }
+        }
+      }    
+    },
+    "extra": {
+      "type": {
+        "displayName": "Type",
+        "type": "list",
+        "required": false,
+        "data": {
+          "read": [
+            "autocompleter",
+            "details"
+          ]
+        }
+      }
+    }
+  }
+}
